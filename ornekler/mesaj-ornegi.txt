@@ -1,0 +1,16 @@
+BU BİR ÖRNEKTİR — gerçek bir müşteri kaydı değildir.
+İletişim formu gönderildiğinde functions/api/contact.js tarafından
+R2'ye (sn-bilgisayar-mesajlar deposu) bu formatta bir dosya yazılır.
+Sadece dosya yapısını göstermek için repoya eklenmiştir.
+
+--------------------------------------------------
+
+Tarih: 15.09.2026 14:32:10
+Ad Soyad: Örnek Müşteri
+Telefon: 0555 000 00 00
+Hizmet Türü: Bilgisayar Tamiri
+Mesaj:
+Bu bir örnek mesaj metnidir. Gerçek mesajlar bu alanda müşterinin
+yazdığı talebi içerir.
+--
+Gönderen IP: 0.0.0.0

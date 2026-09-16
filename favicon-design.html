@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  html,body{margin:0;padding:0;}
+  .icon{
+    width:256px;height:256px;position:relative;
+    clip-path:polygon(22% 0%, 100% 0%, 100% 78%, 78% 100%, 0% 100%, 0% 22%);
+    background:linear-gradient(135deg,#0d1428,#131a30);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Segoe UI',Arial,sans-serif;
+    font-weight:800;font-size:118px;letter-spacing:-2px;
+    color:#22d3a6;
+  }
+  .icon::before{
+    content:"";position:absolute;left:0;top:0;right:0;bottom:0;
+    clip-path:polygon(22% 0%, 100% 0%, 100% 78%, 78% 100%, 0% 100%, 0% 22%);
+    padding:6px;
+    background:linear-gradient(135deg,#3ba7ff,#22d3a6);
+    -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+  }
+</style>
+</head>
+<body>
+  <div class="icon">SN</div>
+</body>
+</html>

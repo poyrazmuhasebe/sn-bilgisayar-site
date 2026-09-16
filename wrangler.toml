@@ -1,0 +1,20 @@
+name = "sn-bilgisayar"
+pages_build_output_dir = "publish"
+compatibility_date = "2026-09-15"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sn-bilgisayar-db"
+database_id = "14d40b63-178e-47c5-9014-5adf54b98b9d"
+
+[[r2_buckets]]
+binding = "CONTACT_BUCKET"
+bucket_name = "sn-bilgisayar-mesajlar"
+
+[[r2_buckets]]
+binding = "ASSETS_BUCKET"
+bucket_name = "sn-bilgisayar-assets"
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "681104d7912844ab898216fdf701fad7"

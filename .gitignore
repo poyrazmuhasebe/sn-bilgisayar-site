@@ -1,0 +1,14 @@
+node_modules/
+package.json
+package-lock.json
+publish/
+mesajlar/
+.wrangler/
+.claude/
+*.zip
+shoot.js
+shoot-favicon.js
+og-image.png
+favicon.png
+logo.png
+.commitmsg.txt

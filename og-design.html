@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1200px;height:630px;overflow:hidden;font-family:"Segoe UI",Arial,sans-serif;}
+  .canvas{
+    width:1200px;height:630px;position:relative;
+    background:#0a0e1a;
+    overflow:hidden;
+  }
+  .glow1{
+    position:absolute;top:-200px;left:-150px;width:700px;height:700px;border-radius:50%;
+    background:radial-gradient(circle, rgba(59,167,255,0.35), transparent 65%);
+    filter:blur(10px);
+  }
+  .glow2{
+    position:absolute;bottom:-250px;right:-150px;width:750px;height:750px;border-radius:50%;
+    background:radial-gradient(circle, rgba(34,211,166,0.30), transparent 65%);
+    filter:blur(10px);
+  }
+  .grid{
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(59,167,255,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59,167,255,0.07) 1px, transparent 1px);
+    background-size:40px 40px;
+    mask-image:radial-gradient(ellipse 900px 500px at 50% 50%, black 40%, transparent 85%);
+  }
+  .scanline{
+    position:absolute;left:0;right:0;height:2px;
+    background:linear-gradient(90deg, transparent, rgba(34,211,166,0.9), transparent);
+    box-shadow:0 0 12px 2px rgba(34,211,166,0.7);
+    top:210px;
+  }
+  .content{
+    position:relative;z-index:2;
+    width:100%;height:100%;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .logo-row{display:flex;align-items:center;gap:26px;margin-bottom:38px;}
+  .logo-mark{
+    width:110px;height:110px;position:relative;flex:none;
+    clip-path:polygon(22% 0%, 100% 0%, 100% 78%, 78% 100%, 0% 100%, 0% 22%);
+    background:linear-gradient(135deg,#0d1428,#131a30);
+    border:2px solid rgba(59,167,255,0.6);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:3rem;letter-spacing:1px;
+    color:#22d3a6;
+    text-shadow:0 0 14px rgba(34,211,166,0.95),0 0 30px rgba(59,167,255,0.7);
+    box-shadow:0 0 26px rgba(59,167,255,0.5),0 0 55px rgba(34,211,166,0.3),inset 0 0 16px rgba(59,167,255,0.2);
+  }
+  .logo-mark::before{
+    content:"";position:absolute;left:-2px;top:-2px;right:-2px;bottom:-2px;
+    clip-path:polygon(22% 0%, 100% 0%, 100% 78%, 78% 100%, 0% 100%, 0% 22%);
+    background:linear-gradient(135deg,rgba(59,167,255,0.9),rgba(34,211,166,0.9));
+    z-index:-1;opacity:.5;filter:blur(3px);
+  }
+  .brand-text{text-align:left;}
+  .brand-text .line1{
+    font-size:2.6rem;font-weight:800;color:#e6e9f2;letter-spacing:1px;line-height:1.15;
+    text-shadow:0 0 18px rgba(59,167,255,0.3);
+  }
+  .brand-text .line2{
+    font-size:1.15rem;font-weight:600;color:#9aa4c0;letter-spacing:3px;margin-top:6px;
+  }
+  .tagline{
+    font-size:1.5rem;color:#c3cadf;font-weight:500;margin-bottom:30px;
+  }
+  .tagline b{
+    background:linear-gradient(135deg,#3ba7ff,#22d3a6);
+    -webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;
+  }
+  .pills{display:flex;gap:16px;}
+  .pill{
+    padding:10px 22px;border-radius:999px;font-size:1rem;font-weight:700;
+    border:1px solid rgba(59,167,255,0.35);background:rgba(59,167,255,0.08);color:#8fd4ff;
+  }
+  .pill.alt{border:1px solid rgba(34,211,166,0.35);background:rgba(34,211,166,0.08);color:#7bf0c9;}
+  .corner-tl, .corner-br{
+    position:absolute;width:70px;height:70px;
+  }
+  .corner-tl{top:36px;left:36px;border-top:3px solid rgba(59,167,255,0.55);border-left:3px solid rgba(59,167,255,0.55);}
+  .corner-br{bottom:36px;right:36px;border-bottom:3px solid rgba(34,211,166,0.55);border-right:3px solid rgba(34,211,166,0.55);}
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="glow1"></div>
+    <div class="glow2"></div>
+    <div class="grid"></div>
+    <div class="scanline"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="logo-row">
+        <div class="logo-mark">SN</div>
+        <div class="brand-text">
+          <div class="line1">SN BİLGİSAYAR</div>
+          <div class="line2">VE GÜVENLİK SİSTEMLERİ</div>
+        </div>
+      </div>
+      <div class="tagline">Bilgisayar <b>Tamiri</b> &nbsp;•&nbsp; <b>Kurulum</b> &nbsp;•&nbsp; Güvenlik <b>Sistemleri</b></div>
+      <div class="pills">
+        <div class="pill">Bahçelievler / İstanbul</div>
+        <div class="pill alt">Garantili Hizmet</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://www.google.com; base-uri 'self'; form-action 'self' https://wa.me; object-src 'none'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+# Site test asamasinda oldugu ve sik guncellendigi icin CSS/JS her ziyarette
+# tazelensin (eski surumun tarayicida takili kalmasini onler).
+/style.css
+  Cache-Control: no-cache
+
+/script.js
+  Cache-Control: no-cache
